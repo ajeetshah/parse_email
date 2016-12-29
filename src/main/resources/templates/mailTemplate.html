@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Feedback Form</title>
+    <style>
+        td.fillable{
+            width:70px;
+            margin-left:10px;
+        }
+    </style>
+</head>
+<body>
+    <span th:text="${message}"></span>
+    <br></br>
+    <h4>Please provide interview feedback in the table below:</h4>
+    <table border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td id="id_name" class="fillable"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Comment</td>
+                <td id="id_comment" class="fillable"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br></br>
+    <p>Thank You</p>
+
+    <p style="display:none;font-size:0;line-height:0;color:#fff;" id="id_token" th:text="${id_token}">Anything:
+        not visible when MailContentBuilder provides 'id_token'</p>
+</body>
+</html>
