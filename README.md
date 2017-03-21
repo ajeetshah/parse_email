@@ -10,12 +10,20 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Open application.properties and set below properties: 
+  * spring.mail.username
+  * spring.mail.password 
+  * spring.mail.host
+  * spring.mail.port etc.
+  which will be used in sending emails from the application
+* Open EmailService.java and set the "To" address
+  * line: `messageHelper.setTo("me@myemail.com");`
+* Open EmailController.java and set below strings:
+  * `String host = "imap.gmail.com";`
+  * `String mailStoreType = "imap";`
+  * `String username = "you@gmail.com";`
+  * `String password = "password";`
+  for the `check()` and `fetch()` methods. Emails in these accounts will be checked or fetched.
 
 ### Contribution guidelines ###
 
